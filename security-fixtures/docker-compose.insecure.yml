@@ -1,0 +1,10 @@
+# CI fixture: privileged service, secrets in env (compose / policy scanners).
+services:
+  web:
+    image: nginx:latest
+    privileged: true
+    ports:
+      - "0.0.0.0:22:22"
+    environment:
+      - DATABASE_PASSWORD=ci-fixture-not-real-password
+      - AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY

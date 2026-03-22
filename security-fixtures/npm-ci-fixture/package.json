@@ -1,0 +1,9 @@
+{
+  "name": "ci-security-fixture-not-for-production",
+  "private": true,
+  "description": "Intentionally old deps for npm audit / SCA in CI only",
+  "dependencies": {
+    "lodash": "4.17.15",
+    "minimist": "0.0.8"
+  }
+}
