@@ -1,0 +1,3 @@
+# SCA: pins with known advisories for pip-audit (CI fixture only).
+requests==2.25.1
+urllib3==1.26.5

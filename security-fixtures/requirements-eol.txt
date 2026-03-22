@@ -1,0 +1,3 @@
+# EOL / legacy pins for lifecycle + advisory tools (CI fixture only).
+requests==2.19.1
+Jinja2==2.10.1

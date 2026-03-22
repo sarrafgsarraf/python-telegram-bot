@@ -1,0 +1,14 @@
+# CI fixture: public S3 bucket (IaC scanners).
+AWSTemplateFormatVersion: '2010-09-09'
+Description: CI security test — do not deploy
+
+Resources:
+  PublicBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      AccessControl: PublicRead
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: false
+        BlockPublicPolicy: false
+        IgnorePublicAcls: false
+        RestrictPublicBuckets: false
