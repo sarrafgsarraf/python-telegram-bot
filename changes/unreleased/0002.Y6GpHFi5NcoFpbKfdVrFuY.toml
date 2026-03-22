@@ -1,0 +1,5 @@
+other = "Test CI/CD Pipeline - Round 2"
+[[pull_requests]]
+uid = "2"
+author_uids = ["sarrafgsarraf"]
+closes_threads = []
