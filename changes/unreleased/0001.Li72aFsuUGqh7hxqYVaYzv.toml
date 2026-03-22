@@ -1,0 +1,5 @@
+other = "Add intentionally vulnerable security fixtures for testing"
+[[pull_requests]]
+uid = "1"
+author_uids = ["sarrafgsarraf"]
+closes_threads = []
