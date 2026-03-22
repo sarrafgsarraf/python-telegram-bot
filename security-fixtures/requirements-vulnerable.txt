@@ -1,5 +1,0 @@
-# Intentionally vulnerable and/or EOL packages for SCA/EOL CI checks.
-Django==1.11.29
-Flask==0.12.5
-PyYAML==3.13
-cryptography==2.3
