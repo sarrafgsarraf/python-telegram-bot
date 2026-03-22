@@ -1,0 +1,13 @@
+# CI fixture: weak Pod security (Kubernetes policy scanners).
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ci-security-test-pod
+spec:
+  hostNetwork: true
+  containers:
+    - name: app
+      image: ubuntu:latest
+      securityContext:
+        privileged: true
+        runAsUser: 0
