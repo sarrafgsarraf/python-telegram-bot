@@ -1,0 +1,5 @@
+other = "Revert \"Update Ruff to v0.15.8\" to restore previous functionality"
+[[pull_requests]]
+uid = "6"
+author_uids = ["sarrafgsarraf"]
+closes_threads = []
