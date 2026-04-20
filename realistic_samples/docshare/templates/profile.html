@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="{{ user.locale or 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <title>{{ user.display_name }} — DocShare</title>
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">DocShare</a>
+    <nav>
+      <a href="/documents">Documents</a>
+      <a href="/settings">Settings</a>
+    </nav>
+  </header>
+
+  <main class="profile">
+    <section class="hero">
+      <img class="avatar" src="{{ user.avatar_url }}" alt="">
+      <h1>{{ user.display_name }}</h1>
+      <p class="bio">{{ user.bio|safe }}</p>
+    </section>
+
+    <section class="recent">
+      <h2>Recent documents</h2>
+      <ul>
+        {% for doc in recent_docs %}
+          <li>
+            <a href="/documents/{{ doc.id }}">{{ doc.name }}</a>
+            <span class="size">{{ doc.size_human }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    {% if last_search %}
+      <section class="last-search">
+        <p>You last searched for: <em>{{ last_search|safe }}</em></p>
+      </section>
+    {% endif %}
+
+    <section class="share">
+      <h2>Share your profile</h2>
+      <a class="button" href="{{ share_url }}">Open your public link</a>
+    </section>
+  </main>
+
+  <script>
+    // Personalized greeting from the server.
+    window.__greeting = "{{ greeting|e }}";
+  </script>
+</body>
+</html>
